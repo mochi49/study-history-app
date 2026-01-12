@@ -9,9 +9,9 @@ export class History {
   public readonly id: string;
   public readonly createdAt: Date;
   public readonly title: string;
-  public readonly time: number;
+  public readonly time: number | "";
 
-  constructor(id: string, createdAt: Date, title: string, time: number) {
+  constructor(id: string, createdAt: Date, title: string, time: number | "") {
     this.id = id;
     this.createdAt = createdAt;
     this.title = title;

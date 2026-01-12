@@ -28,7 +28,7 @@ export const Home: FC = memo(() => {
         textAlign={"center"}
         pt={10}
       >
-        Study History App
+        Study History App ✏
       </Heading>
 
       <Box w={{ base: "400px", md: "800px" }} mx="auto" mt={8}>
