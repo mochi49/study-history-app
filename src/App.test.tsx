@@ -47,7 +47,14 @@ const setupSupabaseMock = () => {
     update: updateMock,
   });
 
-  return { selectMock, returnsMock, insertMock, deleteMock, updateMock, eqMock };
+  return {
+    selectMock,
+    returnsMock,
+    insertMock,
+    deleteMock,
+    updateMock,
+    eqMock,
+  };
 };
 
 beforeAll(() => {
@@ -87,7 +94,7 @@ test("タイトルが表示される", async () => {
   renderApp();
 
   expect(
-    await screen.findByRole("heading", { name: "Study History App" })
+    await screen.findByRole("heading", { name: "Study History App ✏" })
   ).toBeInTheDocument();
 });
 
