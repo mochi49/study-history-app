@@ -18,6 +18,14 @@ jobs:
           node-version: "20"
           cache: "npm"
 
+      - name: Create .env
+        run: |
+          cat <<EOF > .env
+          VITE_SUPABASE_URL=${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_PUBLISHABLE_DEFAULT_KEY=${{ secrets.VITE_SUPABASE_PUBLISHABLE_DEFAULT_KEY }}
+          VITE_SUPABASE_DB_NAME=${{ secrets.VITE_SUPABASE_DB_NAME }}
+          EOF
+
       - name: Install
         run: npm ci
 
